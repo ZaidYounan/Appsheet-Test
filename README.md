@@ -1,24 +1,32 @@
-# README
+Below are the steps to run Ruby on Rails applications on your system.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Install the prerequisites:
 
-Things you may want to cover:
+```
+Node.js
+Yarn
+```
 
-* Ruby version
+Make sure Ruby is installed on your system. Start a terminal and run command:
 
-* System dependencies
+```ruby -v```
+Make sure Ruby is installed (version 2.7.2 is recommended for this application).
 
-* Configuration
+```rails -v```
+If you see a Rails version 6+ then you are good to start, otherwise you must setup Ruby on Rails.
 
-* Database creation
+Once you've cloned this respository
 
-* Database initialization
+Make sure you have ```bundler``` installed, and then navigate to the application root directory and install the dependencies with:
 
-* How to run the test suite
+```bundle install```
 
-* Services (job queues, cache servers, search engines, etc.)
+Now create the database and migrate schema with
 
-* Deployment instructions
+```rake db:create```
 
-* ...
+```rake db:migrate```
+
+Now you can run your application
+
+```rails s```
