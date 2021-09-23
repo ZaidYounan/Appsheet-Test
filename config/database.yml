@@ -80,7 +80,9 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: Reading_List_production
-  username: Reading_List
-  password: <%= ENV['READING_LIST_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
+  # <<: *default
+  # database: Reading_List_production
+  # username: Reading_List
+  # password: <%= ENV['READING_LIST_DATABASE_PASSWORD'] %>
