@@ -80,9 +80,12 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  url: <%= ENV['DATABASE_URL'] %>
+  <<: *default
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>
 
-  # <<: *default
-  # database: Reading_List_production
-  # username: Reading_List
-  # password: <%= ENV['READING_LIST_DATABASE_PASSWORD'] %>
+
+
