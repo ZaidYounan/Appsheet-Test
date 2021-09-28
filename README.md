@@ -26,6 +26,7 @@ Now create the database and migrate schema with
 ```rake db:create```
 
 ```rake db:migrate```
+```
 
 Now you can run your application
 
